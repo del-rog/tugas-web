@@ -1,0 +1,776 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Makassar Food Hub — Temukan Kuliner Terbaik Makassar</title>
+  <meta name="description" content="Jelajahi kuliner khas Makassar. Cari restoran, lihat menu, baca ulasan, dan temukan cita rasa autentik Sulawesi Selatan." />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- ========================================
+       PAGE 1: BERANDA & PENCARIAN
+       ======================================== -->
+  <div id="page-search" class="page active">
+    <!-- Header Bar -->
+    <div class="header-bar"></div>
+
+    <main class="search-page-content">
+      <!-- Hero Title -->
+      <section class="hero-section">
+        <h1 class="hero-title">MAKASSAR</h1>
+        <p class="hero-subtitle">FOOD HUB</p>
+      </section>
+
+      <!-- Search Bar -->
+      <div class="search-container">
+        <div class="search-bar" id="search-bar">
+          <!-- Search Icon -->
+          <svg class="search-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="11" cy="11" r="8"/>
+            <line x1="21" y1="21" x2="16.65" y2="16.65"/>
+          </svg>
+
+          <input type="text" id="search-input" placeholder="Cari restoran atau makanan..." autocomplete="off" />
+
+          <!-- Mic Icon -->
+          <svg class="mic-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M12 1a3 3 0 0 0-3 3v8a3 3 0 0 0 6 0V4a3 3 0 0 0-3-3z"/>
+            <path d="M19 10v2a7 7 0 0 1-14 0v-2"/>
+            <line x1="12" y1="19" x2="12" y2="23"/>
+            <line x1="8" y1="23" x2="16" y2="23"/>
+          </svg>
+        </div>
+      </div>
+
+      <!-- Search Results -->
+      <div class="search-results hidden" id="search-results">
+        <!-- Babathe Results -->
+        <a class="result-item" href="#" data-restaurant="babathe">
+          <svg class="result-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/>
+          </svg>
+          <span class="result-text">Babathe Resto & Cafe</span>
+        </a>
+        <!-- Sop Sodara Results -->
+        <a class="result-item" href="#" data-restaurant="sop-sodara">
+          <svg class="result-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/>
+          </svg>
+          <span class="result-text">Sop Sodara Assauna</span>
+        </a>
+        <!-- Pisang Ijo Juara Results -->
+        <a class="result-item" href="#" data-restaurant="pisang-ijo">
+          <svg class="result-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/>
+          </svg>
+          <span class="result-text">Pisang Ijo Juara</span>
+        </a>
+        <!-- Dinar Seafood Results -->
+        <a class="result-item" href="#" data-restaurant="dinar-seafood">
+          <svg class="result-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/>
+          </svg>
+          <span class="result-text">RM. Dinar Seafood</span>
+        </a>
+        <!-- Tsuka Ramen Results -->
+        <a class="result-item" href="#" data-restaurant="tsuka-ramen">
+          <svg class="result-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/>
+          </svg>
+          <span class="result-text">Tsuka Ramen & Bento</span>
+        </a>
+      </div>
+    </main>
+  </div>
+
+  <!-- ========================================
+       PAGE 2: DETAIL RESTORAN — BABATHE
+       ======================================== -->
+  <div id="page-babathe" class="page">
+    <!-- Header Bar -->
+    <div class="header-bar"></div>
+
+    <main class="detail-page-content" style="position:relative;">
+      <!-- Back Button -->
+      <button class="back-btn" onclick="showPage('page-search')">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+          <line x1="19" y1="12" x2="5" y2="12"/>
+          <polyline points="12 19 5 12 12 5"/>
+        </svg>
+        Kembali
+      </button>
+
+      <!-- Restaurant Header -->
+      <header class="restaurant-header">
+        <h1 class="restaurant-title">Babathe</h1>
+        <div class="restaurant-address">
+          <svg class="pin-icon" viewBox="0 0 24 24" fill="currentColor">
+            <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5a2.5 2.5 0 1 1 0-5 2.5 2.5 0 0 1 0 5z"/>
+          </svg>
+          <span>Ruko Business Park Blok A No.2, 90121 Mariso, Sulawesi Selatan</span>
+        </div>
+        <div class="restaurant-rating">
+          <svg class="star" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          <svg class="star" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          <svg class="star" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          <svg class="star" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          <svg class="star" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          <span class="rating-text">4.8 (1.520 ulasan)</span>
+        </div>
+        <p style="margin-top:10px; font-size:14px; font-style:italic; color:#888;">~ Kansa Viabel Arkananta Badilla</p>
+      </header>
+
+      <!-- Two Column Layout -->
+      <div class="detail-columns">
+        <!-- LEFT COLUMN -->
+        <div class="detail-left">
+          <!-- Main Food Image -->
+          <div class="main-image-container">
+            <img src="assets/babathe-food.jpg" alt="Berbagai hidangan Babathe Resto & Cafe" />
+          </div>
+
+          <!-- Description -->
+          <div class="description-text">
+            <p>
+              Babathe Makassar merupakan salah satu destinasi kuliner yang menawarkan pengalaman bersantap yang unik dengan menggabungkan konsep makanan yang sehat, lezat, dan berkualitas. Restoran ini dikenal karena suasananya yang nyaman dan hangat, sehingga cocok untuk berbagai kegiatan, mulai dari makan bersama keluarga, berkumpul dengan teman, hingga pertemuan kerja yang santai. Desain interior yang rapi dan lingkungan yang bersih semakin menambah kenyamanan pengunjung selama menikmati hidangan.
+            </p>
+            <p>
+              Salah satu daya tarik utama Babathe adalah pilihan menu yang beragam, termasuk gelato yang menjadi favorit banyak pelanggan karena cita rasanya yang nikmat dan teksturnya yang lembut. Selain itu, pelayanan yang ramah dan responsif membuat pengunjung merasa dihargai dan mendapatkan pengalaman makan yang menyenangkan. Harga yang ditawarkan juga tergolong terjangkau jika dibandingkan dengan kualitas makanan dan fasilitas yang tersedia.
+            </p>
+            <p>
+              Keunggulan lain dari Babathe X Luce Toddopuli Resto and Gelato adalah pemanfaatan teknologi dalam proses pemesanan. Pengunjung dapat melihat dan menjelajahi menu secara lebih praktis melalui perangkat tablet yang tersedia, sehingga mereka dapat memilih makanan dan minuman dengan lebih mudah tanpa terburu-buru. Inovasi ini tidak hanya meningkatkan kenyamanan pelanggan, tetapi juga memberikan pengalaman bersantap yang lebih modern dan interaktif.
+            </p>
+            <p>
+              Dengan kombinasi makanan berkualitas, suasana yang nyaman, pelayanan yang baik, serta penggunaan teknologi yang inovatif, Babathe menjadi salah satu pilihan kuliner yang menarik di Kota Makassar.
+            </p>
+          </div>
+        </div>
+
+        <!-- RIGHT COLUMN -->
+        <div class="detail-right">
+          <!-- Tab Navigation -->
+          <nav class="tab-nav">
+            <button class="tab-btn active" data-tab="babathe-comments">Comments</button>
+            <button class="tab-btn" data-tab="babathe-menu">Menu</button>
+            <button class="tab-btn" data-tab="babathe-picture">Picture</button>
+          </nav>
+
+          <!-- Yellow Frame -->
+          <div class="yellow-frame">
+            <!-- Tab 1: Comments -->
+            <div class="tab-content active" id="content-babathe-comments">
+              <h2 class="comment-header">Berikan Komentar</h2>
+
+              <!-- Comment Input -->
+              <div class="comment-input-row">
+                <div class="avatar-placeholder">
+                  <svg viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M12 12c2.7 0 4.8-2.1 4.8-4.8S14.7 2.4 12 2.4 7.2 4.5 7.2 7.2 9.3 12 12 12zm0 2.4c-3.2 0-9.6 1.6-9.6 4.8v2.4h19.2v-2.4c0-3.2-6.4-4.8-9.6-4.8z"/>
+                  </svg>
+                </div>
+                <input class="comment-input" type="text" placeholder="Tulis komentar Anda..." />
+              </div>
+
+              <!-- Existing Comments -->
+              <div class="existing-comments">
+                <div class="comment-row">
+                  <div class="avatar-placeholder">
+                    <svg viewBox="0 0 24 24" fill="currentColor">
+                      <path d="M12 12c2.7 0 4.8-2.1 4.8-4.8S14.7 2.4 12 2.4 7.2 4.5 7.2 7.2 9.3 12 12 12zm0 2.4c-3.2 0-9.6 1.6-9.6 4.8v2.4h19.2v-2.4c0-3.2-6.4-4.8-9.6-4.8z"/>
+                    </svg>
+                  </div>
+                  <div class="comment-bubble">
+                    <div class="comment-author">Aldi Alfriansyah</div>
+                    Tempatnya super cozy dan estetik! Gelato-nya juara banget, teksturnya lembut dan rasanya authentic. Cocok banget buat nongkrong santai bareng teman. ❤️🍦
+                  </div>
+                </div>
+                <div class="comment-row">
+                  <div class="avatar-placeholder">
+                    <svg viewBox="0 0 24 24" fill="currentColor">
+                      <path d="M12 12c2.7 0 4.8-2.1 4.8-4.8S14.7 2.4 12 2.4 7.2 4.5 7.2 7.2 9.3 12 12 12zm0 2.4c-3.2 0-9.6 1.6-9.6 4.8v2.4h19.2v-2.4c0-3.2-6.4-4.8-9.6-4.8z"/>
+                    </svg>
+                  </div>
+                  <div class="comment-bubble">
+                    <div class="comment-author">Rini Wahyuni</div>
+                    Suka banget sama konsep pesan lewat tablet-nya, modern dan praktis! Nasi goreng kampungnya juga enak. Harganya worth it untuk kualitas dan suasananya. 👏
+                  </div>
+                </div>
+                <div class="comment-row">
+                  <div class="avatar-placeholder">
+                    <svg viewBox="0 0 24 24" fill="currentColor">
+                      <path d="M12 12c2.7 0 4.8-2.1 4.8-4.8S14.7 2.4 12 2.4 7.2 4.5 7.2 7.2 9.3 12 12 12zm0 2.4c-3.2 0-9.6 1.6-9.6 4.8v2.4h19.2v-2.4c0-3.2-6.4-4.8-9.6-4.8z"/>
+                    </svg>
+                  </div>
+                  <div class="comment-bubble">
+                    <div class="comment-author">Dimas Arkananta</div>
+                    Bawa keluarga kemarin dan semua senang. Menu-nya lengkap banget dari makanan berat sampai dessert. Pelayanannya ramah dan cepat. Pasti balik lagi! 🔥🍽️
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Tab 2: Menu -->
+            <div class="tab-content" id="content-babathe-menu">
+              <div class="menu-tab-content">
+                <img src="assets/babathe-menu.png" alt="Menu dan daftar harga Babathe Resto & Cafe" />
+              </div>
+            </div>
+
+            <!-- Tab 3: Picture -->
+            <div class="tab-content" id="content-babathe-picture">
+              <div class="picture-tab-content">
+                <img src="assets/babathe-interior1.png" alt="Suasana tempat duduk Babathe yang nyaman" />
+                <img src="assets/babathe-interior2.jpg" alt="Suasana interior Babathe yang ramai pengunjung" />
+                <img src="assets/babathe-interior3.png" alt="Suasana makan bersama keluarga di Babathe" />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+  </div>
+
+  <!-- ========================================
+       PAGE 3: DETAIL RESTORAN — SOP SODARA ASSAUNA
+       ======================================== -->
+  <div id="page-sop-sodara" class="page">
+    <!-- Header Bar -->
+    <div class="header-bar"></div>
+
+    <main class="detail-page-content" style="position:relative;">
+      <!-- Back Button -->
+      <button class="back-btn" onclick="showPage('page-search')">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+          <line x1="19" y1="12" x2="5" y2="12"/>
+          <polyline points="12 19 5 12 12 5"/>
+        </svg>
+        Kembali
+      </button>
+
+      <!-- Restaurant Header -->
+      <header class="restaurant-header">
+        <h1 class="restaurant-title">Sop Sodara Assauna</h1>
+        <div class="restaurant-address">
+          <svg class="pin-icon" viewBox="0 0 24 24" fill="currentColor">
+            <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5a2.5 2.5 0 1 1 0-5 2.5 2.5 0 0 1 0 5z"/>
+          </svg>
+          <span>Jl. Urip Sumoharjo No.38, RT.001/RW.01, Karuwisi Utara, Kec. Panakkukang, Kota Makassar, Sulawesi Selatan 90232</span>
+        </div>
+        <div class="restaurant-rating">
+          <svg class="star" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          <svg class="star" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          <svg class="star" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          <svg class="star" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          <svg class="star" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          <span class="rating-text">4.9 (3.180 ulasan)</span>
+        </div>
+        <p style="margin-top:10px; font-size:14px; font-style:italic; color:#888;">~ Dona Natasya Mangosa</p>
+      </header>
+
+      <!-- Two Column Layout -->
+      <div class="detail-columns">
+        <!-- LEFT COLUMN -->
+        <div class="detail-left">
+          <!-- Main Food Image -->
+          <div class="main-image-container">
+            <img src="assets/sop-saudara-food.jpg" alt="Sop Saudara Assauna dengan ikan bakar dan nasi" />
+          </div>
+
+          <!-- Description -->
+          <div class="description-text">
+            <p>
+              Di tengah maraknya kuliner modern yang terus bermunculan di Kota Makassar, ada satu warung sederhana yang tetap bertahan dan justru semakin dicintai banyak orang: Sop Saudara Assauna. Bagi warga lokal, nama ini bukan sekadar tempat makan, melainkan bagian dari cerita keseharian masyarakat Makassar. Dari mahasiswa, pekerja kantoran, hingga sopir ojek online, hampir semua pernah merasakan hangatnya semangkuk sop saudara di tempat ini.
+            </p>
+            <p>
+              Aroma rempah yang khas langsung menyambut sejak pertama kali memasuki warung makan tersebut. Kuah hitam kecokelatan yang gurih berpadu dengan potongan daging sapi, bihun, dan perkedel menjadi ciri utama kuliner legendaris khas Sulawesi Selatan ini. Disajikan bersama ikan bakar dan nasi hangat, Sop Saudara Assauna menghadirkan rasa sederhana yang sulit dilupakan.
+            </p>
+            <p>
+              Di tengah harga makanan yang semakin meningkat, Sop Saudara Assauna justru tetap dikenal sebagai kuliner "penyelamat akhir bulan" bagi para pelajar dan mahasiswa. Dengan harga yang relatif murah dan porsi yang mengenyangkan, tempat ini menjadi pilihan favorit banyak anak muda di Makassar. Kesederhanaan tempatnya tidak mengurangi antusias pengunjung — kursi dan meja yang selalu terisi menjadi bukti bahwa rasa dan kualitas masih menjadi alasan utama orang datang kembali.
+            </p>
+            <p>
+              Bahkan, banyak pelanggan mengaku sudah makan di tempat ini sejak masih kecil karena diajak oleh orang tua mereka. Kini, mereka kembali datang bersama teman atau keluarga, menjadikan Sop Saudara Assauna sebagai kuliner lintas generasi. Kehadiran tempat ini menjadi bukti bahwa kuliner legendaris tidak harus mahal untuk tetap dicintai.
+            </p>
+          </div>
+        </div>
+
+        <!-- RIGHT COLUMN -->
+        <div class="detail-right">
+          <!-- Tab Navigation -->
+          <nav class="tab-nav">
+            <button class="tab-btn active" data-tab="sop-comments">Comments</button>
+            <button class="tab-btn" data-tab="sop-menu">Menu</button>
+            <button class="tab-btn" data-tab="sop-picture">Picture</button>
+          </nav>
+
+          <!-- Yellow Frame -->
+          <div class="yellow-frame">
+            <!-- Tab 1: Comments -->
+            <div class="tab-content active" id="content-sop-comments">
+              <h2 class="comment-header">Berikan Komentar</h2>
+
+              <!-- Comment Input -->
+              <div class="comment-input-row">
+                <div class="avatar-placeholder">
+                  <svg viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M12 12c2.7 0 4.8-2.1 4.8-4.8S14.7 2.4 12 2.4 7.2 4.5 7.2 7.2 9.3 12 12 12zm0 2.4c-3.2 0-9.6 1.6-9.6 4.8v2.4h19.2v-2.4c0-3.2-6.4-4.8-9.6-4.8z"/>
+                  </svg>
+                </div>
+                <input class="comment-input" type="text" placeholder="Tulis komentar Anda..." />
+              </div>
+
+              <!-- Existing Comments -->
+              <div class="existing-comments">
+                <div class="comment-row">
+                  <div class="avatar-placeholder">
+                    <svg viewBox="0 0 24 24" fill="currentColor">
+                      <path d="M12 12c2.7 0 4.8-2.1 4.8-4.8S14.7 2.4 12 2.4 7.2 4.5 7.2 7.2 9.3 12 12 12zm0 2.4c-3.2 0-9.6 1.6-9.6 4.8v2.4h19.2v-2.4c0-3.2-6.4-4.8-9.6-4.8z"/>
+                    </svg>
+                  </div>
+                  <div class="comment-bubble">
+                    <div class="comment-author">Hendra Gunawan</div>
+                    Sudah langganan dari zaman kuliah! Kuah sopnya autentik banget, hitam pekat dan gurih. Satu porsi sama ikan bakar pasti bikin kenyang seharian. 🍲🔥
+                  </div>
+                </div>
+                <div class="comment-row">
+                  <div class="avatar-placeholder">
+                    <svg viewBox="0 0 24 24" fill="currentColor">
+                      <path d="M12 12c2.7 0 4.8-2.1 4.8-4.8S14.7 2.4 12 2.4 7.2 4.5 7.2 7.2 9.3 12 12 12zm0 2.4c-3.2 0-9.6 1.6-9.6 4.8v2.4h19.2v-2.4c0-3.2-6.4-4.8-9.6-4.8z"/>
+                    </svg>
+                  </div>
+                  <div class="comment-bubble">
+                    <div class="comment-author">Nurul Aisyah</div>
+                    Ini beneran penyelamat akhir bulan haha! Harganya murah banget tapi rasanya ga kalah sama restoran mahal. Perkedel-nya favorit aku. 😍👌
+                  </div>
+                </div>
+                <div class="comment-row">
+                  <div class="avatar-placeholder">
+                    <svg viewBox="0 0 24 24" fill="currentColor">
+                      <path d="M12 12c2.7 0 4.8-2.1 4.8-4.8S14.7 2.4 12 2.4 7.2 4.5 7.2 7.2 9.3 12 12 12zm0 2.4c-3.2 0-9.6 1.6-9.6 4.8v2.4h19.2v-2.4c0-3.2-6.4-4.8-9.6-4.8z"/>
+                    </svg>
+                  </div>
+                  <div class="comment-bubble">
+                    <div class="comment-author">Ridwan Saputra</div>
+                    Bawa anak-anak makan di sini, mereka langsung suka! Suasana warungnya sederhana tapi terasa hangat dan bersahabat. Kuliner wajib kalau ke Makassar! 🙌
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Tab 2: Menu -->
+            <div class="tab-content" id="content-sop-menu">
+              <div class="menu-tab-content">
+                <img src="assets/sop-saudara-menu.png" alt="Daftar harga menu Warung Sop Saudara Ta Assauna" />
+              </div>
+            </div>
+
+            <!-- Tab 3: Picture -->
+            <div class="tab-content" id="content-sop-picture">
+              <div class="picture-tab-content">
+                <img src="assets/sop-saudara-interior.png" alt="Suasana Warung Sop Saudara Assauna yang ramai pengunjung" />
+                <img src="assets/sop-saudara-exterior.png" alt="Tampak luar Warung Sop Saudara Ta Assauna di malam hari" />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+  </div>
+
+  <!-- ========================================
+       PAGE 4: DETAIL RESTORAN — PISANG IJO JUARA
+       ======================================== -->
+  <div id="page-pisang-ijo" class="page">
+    <!-- Header Bar -->
+    <div class="header-bar"></div>
+
+    <main class="detail-page-content" style="position:relative;">
+      <!-- Back Button -->
+      <button class="back-btn" onclick="showPage('page-search')">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+          <line x1="19" y1="12" x2="5" y2="12"/>
+          <polyline points="12 19 5 12 12 5"/>
+        </svg>
+        Kembali
+      </button>
+
+      <!-- Restaurant Header -->
+      <header class="restaurant-header">
+        <h1 class="restaurant-title">Pisang Ijo Juara</h1>
+        <div class="restaurant-address">
+          <svg class="pin-icon" viewBox="0 0 24 24" fill="currentColor">
+            <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5a2.5 2.5 0 1 1 0-5 2.5 2.5 0 0 1 0 5z"/>
+          </svg>
+          <span>Racing Centre Ruko Gardenia No. 6, 90121, Mariso, Makassar, Sulawesi Selatan</span>
+        </div>
+        <div class="restaurant-rating">
+          <svg class="star" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          <svg class="star" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          <svg class="star" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          <svg class="star" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          <svg class="star" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          <span class="rating-text">4.7 (980 ulasan)</span>
+        </div>
+        <p style="margin-top:10px; font-size:14px; font-style:italic; color:#888;">~ Alya Safitri</p>
+      </header>
+
+      <!-- Two Column Layout -->
+      <div class="detail-columns">
+        <!-- LEFT COLUMN -->
+        <div class="detail-left">
+          <!-- Main Food Image -->
+          <div class="main-image-container">
+            <img src="assets/pisang-ijo-food.png" alt="Pisang Ijo Juara khas Makassar dengan kuah santan dan sirup" />
+          </div>
+
+          <!-- Description -->
+          <div class="description-text">
+            <p>
+              Pisang Ijo Juara merupakan salah satu destinasi kuliner khas Makassar yang menawarkan pengalaman menikmati pencuci mulut tradisional dengan konsep yang modern, lezat, dan berkualitas. Kedai ini dikenal karena menggunakan ekstrak daun pandan asli untuk menjaga cita rasa otentik, sehingga sangat cocok untuk dinikmati bersama keluarga, berkumpul dengan teman, hingga menjadi pilihan takjil yang menyegarkan.
+            </p>
+            <p>
+              Salah satu daya tarik utama Pisang Ijo Juara adalah pilihan menunya yang beragam dan inovatif, tidak hanya terbatas pada pisang ijo klasik tetapi juga varian menu dessert segar lainnya. Selain itu, jaminan sertifikasi halal dan kemudahan akses pemesanan membuat pelanggan merasa aman dan nyaman. Harga yang ditawarkan juga tergolong sangat terjangkau dan sering menghadirkan promo menarik, menjadikannya pilihan yang sangat ramah di kantong dengan kualitas rasa yang premium.
+            </p>
+            <p>
+              Keunggulan lain dari Pisang Ijo Juara adalah kemudahan dalam proses pemesanan dan layanan pelanggan yang adaptif. Pengunjung dapat memilih untuk menikmati hidangan langsung di tempat (dine-in) atau memesan secara praktis dari rumah melalui perangkat smartphone via GrabFood dan GoFood.
+            </p>
+            <p>
+              Melalui kombinasi rasa tradisional yang otentik, harga bersahabat, serta kemudahan akses pemesanan, Pisang Ijo Juara sukses menjadi salah satu pilihan kuliner hits yang wajib dicoba di Makassar.
+            </p>
+          </div>
+        </div>
+
+        <!-- RIGHT COLUMN -->
+        <div class="detail-right">
+          <!-- Tab Navigation -->
+          <nav class="tab-nav">
+            <button class="tab-btn active" data-tab="pij-comments">Comments</button>
+            <button class="tab-btn" data-tab="pij-menu">Menu</button>
+            <button class="tab-btn" data-tab="pij-picture">Picture</button>
+          </nav>
+
+          <!-- Yellow Frame -->
+          <div class="yellow-frame">
+            <!-- Tab 1: Comments -->
+            <div class="tab-content active" id="content-pij-comments">
+              <h2 class="comment-header">Berikan Komentar</h2>
+
+              <!-- Comment Input -->
+              <div class="comment-input-row">
+                <div class="avatar-placeholder">
+                  <svg viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M12 12c2.7 0 4.8-2.1 4.8-4.8S14.7 2.4 12 2.4 7.2 4.5 7.2 7.2 9.3 12 12 12zm0 2.4c-3.2 0-9.6 1.6-9.6 4.8v2.4h19.2v-2.4c0-3.2-6.4-4.8-9.6-4.8z"/>
+                  </svg>
+                </div>
+                <input class="comment-input" type="text" placeholder="Tulis komentar Anda..." />
+              </div>
+
+              <!-- Existing Comments -->
+              <div class="existing-comments">
+                <div class="comment-row">
+                  <div class="avatar-placeholder">
+                    <svg viewBox="0 0 24 24" fill="currentColor">
+                      <path d="M12 12c2.7 0 4.8-2.1 4.8-4.8S14.7 2.4 12 2.4 7.2 4.5 7.2 7.2 9.3 12 12 12zm0 2.4c-3.2 0-9.6 1.6-9.6 4.8v2.4h19.2v-2.4c0-3.2-6.4-4.8-9.6-4.8z"/>
+                    </svg>
+                  </div>
+                  <div class="comment-bubble">
+                    <div class="comment-author">Yanti Mahmud</div>
+                    Pisang ijonya enak banget! Kulitnya tipis, empuk, dan wangi pandan. Kuah santannya creamy. Cocok banget buat takjil maupun dessert sehari-hari! 🍌💚
+                  </div>
+                </div>
+                <div class="comment-row">
+                  <div class="avatar-placeholder">
+                    <svg viewBox="0 0 24 24" fill="currentColor">
+                      <path d="M12 12c2.7 0 4.8-2.1 4.8-4.8S14.7 2.4 12 2.4 7.2 4.5 7.2 7.2 9.3 12 12 12zm0 2.4c-3.2 0-9.6 1.6-9.6 4.8v2.4h19.2v-2.4c0-3.2-6.4-4.8-9.6-4.8z"/>
+                    </svg>
+                  </div>
+                  <div class="comment-bubble">
+                    <div class="comment-author">Farhan Hidayat</div>
+                    Harganya murah tapi rasanya premium! Udah certified halal pula. Bisa pesan via GrabFood jadi gampang banget. Recommended banget buat yang di Makassar. 👍🔥
+                  </div>
+                </div>
+                <div class="comment-row">
+                  <div class="avatar-placeholder">
+                    <svg viewBox="0 0 24 24" fill="currentColor">
+                      <path d="M12 12c2.7 0 4.8-2.1 4.8-4.8S14.7 2.4 12 2.4 7.2 4.5 7.2 7.2 9.3 12 12 12zm0 2.4c-3.2 0-9.6 1.6-9.6 4.8v2.4h19.2v-2.4c0-3.2-6.4-4.8-9.6-4.8z"/>
+                    </svg>
+                  </div>
+                  <div class="comment-bubble">
+                    <div class="comment-author">Mega Sartika</div>
+                    Variannya banyak dan semua enak! Tempat duduknya juga nyaman. Sering datang bersama keluarga setelah maghrib. Jadi langganan tetap kami sekeluarga! 😍🌟
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Tab 2: Menu -->
+            <div class="tab-content" id="content-pij-menu">
+              <div class="menu-tab-content">
+                <img src="assets/pisang-ijo-menu.jpg" alt="Menu Spesial Pisang Ijo Juara" />
+              </div>
+            </div>
+
+            <!-- Tab 3: Picture -->
+            <div class="tab-content" id="content-pij-picture">
+              <div class="picture-tab-content">
+                <img src="assets/pisang-ijo-drinks.png" alt="Minuman segar Pisang Ijo Juara" />
+                <img src="assets/pisang-ijo-desserts.png" alt="Aneka dessert khas Pisang Ijo Juara" />
+                <img src="assets/pisang-ijo-interior.png" alt="Suasana dalam kedai Pisang Ijo Juara" />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+  </div>
+
+  <!-- ========================================
+       PAGE 5: DETAIL RESTORAN — RM. DINAR SEAFOOD
+       ======================================== -->
+  <div id="page-dinar-seafood" class="page">
+    <div class="header-bar"></div>
+    <main class="detail-page-content" style="position:relative;">
+      <button class="back-btn" onclick="showPage('page-search')">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+          <line x1="19" y1="12" x2="5" y2="12"/><polyline points="12 19 5 12 12 5"/>
+        </svg>
+        Kembali
+      </button>
+
+      <header class="restaurant-header">
+        <h1 class="restaurant-title">RM. Dinar Seafood</h1>
+        <div class="restaurant-address">
+          <svg class="pin-icon" viewBox="0 0 24 24" fill="currentColor">
+            <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5a2.5 2.5 0 1 1 0-5 2.5 2.5 0 0 1 0 5z"/>
+          </svg>
+          <span>Jl. Lamaddukelleng No.68, Losari, Kec. Ujung Pandang, Kota Makassar, Sulawesi Selatan 90113</span>
+        </div>
+        <div class="restaurant-rating">
+          <svg class="star" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          <svg class="star" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          <svg class="star" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          <svg class="star" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          <svg class="star" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          <span class="rating-text">4.6 (2.710 ulasan)</span>
+        </div>
+        <p style="margin-top:10px; font-size:14px; font-style:italic; color:#888;">~ Alifa Putri Zaldy</p>
+      </header>
+
+      <div class="detail-columns">
+        <!-- LEFT COLUMN -->
+        <div class="detail-left">
+          <div class="main-image-container">
+            <img src="assets/dinar-exterior.png" alt="Tampak depan RM. Dinar Seafood Makassar" />
+          </div>
+          <div class="description-text">
+            <p>
+              RM. Dinar Seafood merupakan salah satu destinasi kuliner seafood di Kota Makassar yang menawarkan konsep restoran keluarga dengan nuansa modern dan nyaman. Restoran ini memiliki area indoor yang luas dan sejuk sehingga cocok dijadikan tempat makan bersama keluarga, teman, maupun untuk acara tertentu. Suasana restoran yang tertata rapi dan nyaman membuat pengunjung dapat menikmati hidangan dengan lebih santai dan menyenangkan.
+            </p>
+            <p>
+              Salah satu daya tarik utama RM. Dinar Seafood adalah pilihan seafood yang dapat dipilih sendiri oleh pelanggan sesuai selera. Berbagai jenis seafood yang tersedia dikenal segar dan diolah dengan bumbu khas yang lezat. Menu andalan seperti ikan bakar katamba dengan bumbu parape serta buncis telur asin menjadi favorit banyak pengunjung karena cita rasanya yang khas dan menggugah selera.
+            </p>
+            <p>
+              Pelayanan di RM. Dinar Seafood juga dikenal ramah dan cepat sehingga memberikan kenyamanan bagi setiap pengunjung. Restoran ini turut dilengkapi dengan beberapa fasilitas pendukung seperti mushola dan VIP room yang dapat digunakan untuk acara keluarga maupun pertemuan tertentu.
+            </p>
+            <p>
+              Dengan kombinasi suasana yang nyaman, seafood segar, cita rasa makanan yang lezat, serta fasilitas yang memadai, RM. Dinar Seafood menjadi salah satu pilihan tempat makan seafood yang menarik dan cocok untuk berbagai kalangan, khususnya keluarga di Kota Makassar.
+            </p>
+          </div>
+        </div>
+
+        <!-- RIGHT COLUMN -->
+        <div class="detail-right">
+          <nav class="tab-nav">
+            <button class="tab-btn active" data-tab="dinar-comments">Comments</button>
+            <button class="tab-btn" data-tab="dinar-menu">Menu</button>
+            <button class="tab-btn" data-tab="dinar-picture">Picture</button>
+          </nav>
+          <div class="yellow-frame">
+            <!-- Tab 1: Comments -->
+            <div class="tab-content active" id="content-dinar-comments">
+              <h2 class="comment-header">Berikan Komentar</h2>
+              <div class="comment-input-row">
+                <div class="avatar-placeholder">
+                  <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 12c2.7 0 4.8-2.1 4.8-4.8S14.7 2.4 12 2.4 7.2 4.5 7.2 7.2 9.3 12 12 12zm0 2.4c-3.2 0-9.6 1.6-9.6 4.8v2.4h19.2v-2.4c0-3.2-6.4-4.8-9.6-4.8z"/></svg>
+                </div>
+                <input class="comment-input" type="text" placeholder="Tulis komentar Anda..." />
+              </div>
+              <div class="existing-comments">
+                <div class="comment-row">
+                  <div class="avatar-placeholder">
+                    <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 12c2.7 0 4.8-2.1 4.8-4.8S14.7 2.4 12 2.4 7.2 4.5 7.2 7.2 9.3 12 12 12zm0 2.4c-3.2 0-9.6 1.6-9.6 4.8v2.4h19.2v-2.4c0-3.2-6.4-4.8-9.6-4.8z"/></svg>
+                  </div>
+                  <div class="comment-bubble">
+                    <div class="comment-author">Rahman Kadir</div>
+                    Ikan bakar katamba bumbu parapenya juara! Dagingnya segar, bumbu meresap sempurna. Suasana restorannya juga nyaman banget, cocok buat makan keluarga. 🐟🔥
+                  </div>
+                </div>
+                <div class="comment-row">
+                  <div class="avatar-placeholder">
+                    <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 12c2.7 0 4.8-2.1 4.8-4.8S14.7 2.4 12 2.4 7.2 4.5 7.2 7.2 9.3 12 12 12zm0 2.4c-3.2 0-9.6 1.6-9.6 4.8v2.4h19.2v-2.4c0-3.2-6.4-4.8-9.6-4.8z"/></svg>
+                  </div>
+                  <div class="comment-bubble">
+                    <div class="comment-author">Dewi Kurniawati</div>
+                    Pilih seafood sendiri sesuai selera itu pengalaman yang seru banget! Buncis telur asinnya favorit saya. Pelayanannya ramah dan cepat. Pasti balik lagi! 🦐👌
+                  </div>
+                </div>
+                <div class="comment-row">
+                  <div class="avatar-placeholder">
+                    <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 12c2.7 0 4.8-2.1 4.8-4.8S14.7 2.4 12 2.4 7.2 4.5 7.2 7.2 9.3 12 12 12zm0 2.4c-3.2 0-9.6 1.6-9.6 4.8v2.4h19.2v-2.4c0-3.2-6.4-4.8-9.6-4.8z"/></svg>
+                  </div>
+                  <div class="comment-bubble">
+                    <div class="comment-author">Irwan Syahputra</div>
+                    Ada VIP room-nya, jadi kami sering pakai untuk arisan keluarga besar. Interior restorannya bagus dan bersih. Recommended untuk acara makan bersama! 🍽️✨
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Tab 2: Menu -->
+            <div class="tab-content" id="content-dinar-menu">
+              <div class="menu-tab-content">
+                <img src="assets/dinar-menu.jpg" alt="Menu Sajian Spesial Ramadan RM. Dinar Seafood" />
+              </div>
+            </div>
+
+            <!-- Tab 3: Picture -->
+            <div class="tab-content" id="content-dinar-picture">
+              <div class="picture-tab-content">
+                <img src="assets/dinar-interior1.jpg" alt="Interior RM. Dinar Seafood yang luas dan modern" />
+                <img src="assets/dinar-interior2.png" alt="Area makan RM. Dinar Seafood" />
+                <img src="assets/dinar-interior3.png" alt="Pelayanan di RM. Dinar Seafood" />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+  </div>
+
+  <!-- ========================================
+       PAGE 6: DETAIL RESTORAN — TSUKA RAMEN & BENTO
+       ======================================== -->
+  <div id="page-tsuka-ramen" class="page">
+    <div class="header-bar"></div>
+    <main class="detail-page-content" style="position:relative;">
+      <button class="back-btn" onclick="showPage('page-search')">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+          <line x1="19" y1="12" x2="5" y2="12"/><polyline points="12 19 5 12 12 5"/>
+        </svg>
+        Kembali
+      </button>
+
+      <header class="restaurant-header">
+        <h1 class="restaurant-title">Tsuka Ramen & Bento</h1>
+        <div class="restaurant-address">
+          <svg class="pin-icon" viewBox="0 0 24 24" fill="currentColor">
+            <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5a2.5 2.5 0 1 1 0-5 2.5 2.5 0 0 1 0 5z"/>
+          </svg>
+          <span>Jl. DR. Ratulangi No.120, Mario, Kec. Mariso, Kota Makassar, Sulawesi Selatan 90125</span>
+        </div>
+        <div class="restaurant-rating">
+          <svg class="star" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          <svg class="star" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          <svg class="star" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          <svg class="star" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          <svg class="star" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          <span class="rating-text">4.8 (1.520 ulasan)</span>
+        </div>
+        <p style="margin-top:10px; font-size:14px; font-style:italic; color:#888;">~ Puji Lestari Legsani Wati</p>
+      </header>
+
+      <div class="detail-columns">
+        <!-- LEFT COLUMN -->
+        <div class="detail-left">
+          <div class="main-image-container">
+            <img src="assets/tsuka-food.jpg" alt="Sajian Ramen Tsuka Ramen & Bento" />
+          </div>
+          <div class="description-text">
+            <p>
+              Tsuka Ramen & Bento Ratulangi Makassar by Legit Group merupakan salah satu restoran ramen Jepang modern yang cukup populer di Makassar, terutama di kalangan anak muda dan pecinta kuliner Jepang. Tempat ini mengusung konsep Japanese casual dining dengan suasana yang estetik, nyaman, dan cocok dijadikan tempat nongkrong maupun membuat konten media sosial. Interiornya dibuat modern dengan nuansa Jepang kekinian sehingga memberikan pengalaman makan yang lebih menarik dibanding warung ramen biasa. 
+            </p>
+            <p>
+              Salah satu alasan tempat ini ramai adalah karena mereka menawarkan ramen halal dengan harga yang relatif terjangkau. Menu yang paling sering dicari biasanya Original Tsuka Ramen, Miso Ramen, Volcano Ramen, dan Red Ninja Ramen yang memiliki cita rasa gurih dan creamy dengan pilihan tingkat kepedasan tertentu. Selain ramen, tersedia juga side dish seperti chicken karaage, gyoza, egg tempura, dan berbagai minuman ala Japanese café.
+            </p>
+            <p>
+              Berbeda dengan ramen autentik Jepang yang sering fokus pada kaldu berat dan rasa umami yang lebih kompleks, Tsuka Ramen lebih menyesuaikan rasa dengan lidah Indonesia. Kuahnya dibuat lebih creamy, lebih kuat bumbunya, dan lebih cocok untuk pengunjung yang suka makanan gurih dan pedas. Strategi seperti ini memang membuat restoran lebih mudah diterima pasar Indonesia, terutama mahasiswa dan anak muda.
+            </p>
+            <p>
+              Yang cukup menarik, Tsuka Ramen juga sudah mengusung konsep halal dan modern branding sehingga berbeda dengan ramen Jepang tradisional yang banyak menggunakan pork broth. Karena itu, restoran ini lebih mudah menjangkau pasar Muslim di Indonesia.
+            </p>
+          </div>
+        </div>
+
+        <!-- RIGHT COLUMN -->
+        <div class="detail-right">
+          <nav class="tab-nav">
+            <button class="tab-btn active" data-tab="tsuka-comments">Comments</button>
+            <button class="tab-btn" data-tab="tsuka-menu">Menu</button>
+            <button class="tab-btn" data-tab="tsuka-picture">Picture</button>
+          </nav>
+          <div class="yellow-frame">
+            <!-- Tab 1: Comments -->
+            <div class="tab-content active" id="content-tsuka-comments">
+              <h2 class="comment-header">Berikan Komentar</h2>
+              <div class="comment-input-row">
+                <div class="avatar-placeholder">
+                  <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 12c2.7 0 4.8-2.1 4.8-4.8S14.7 2.4 12 2.4 7.2 4.5 7.2 7.2 9.3 12 12 12zm0 2.4c-3.2 0-9.6 1.6-9.6 4.8v2.4h19.2v-2.4c0-3.2-6.4-4.8-9.6-4.8z"/></svg>
+                </div>
+                <input class="comment-input" type="text" placeholder="Tulis komentar Anda..." />
+              </div>
+              <div class="existing-comments">
+                <div class="comment-row">
+                  <div class="avatar-placeholder">
+                    <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 12c2.7 0 4.8-2.1 4.8-4.8S14.7 2.4 12 2.4 7.2 4.5 7.2 7.2 9.3 12 12 12zm0 2.4c-3.2 0-9.6 1.6-9.6 4.8v2.4h19.2v-2.4c0-3.2-6.4-4.8-9.6-4.8z"/></svg>
+                  </div>
+                  <div class="comment-bubble">
+                    <div class="comment-author">Budi Santoso</div>
+                    Volcano Ramen-nya enak banget buat yang suka pedas! Kuahnya kental dan creamy, pas banget dengan seleraku. Harganya juga bersahabat di kantong. 🍜🔥
+                  </div>
+                </div>
+                <div class="comment-row">
+                  <div class="avatar-placeholder">
+                    <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 12c2.7 0 4.8-2.1 4.8-4.8S14.7 2.4 12 2.4 7.2 4.5 7.2 7.2 9.3 12 12 12zm0 2.4c-3.2 0-9.6 1.6-9.6 4.8v2.4h19.2v-2.4c0-3.2-6.4-4.8-9.6-4.8z"/></svg>
+                  </div>
+                  <div class="comment-bubble">
+                    <div class="comment-author">Amelia Rizky</div>
+                    Tempatnya super estetik dan instagramable! Banyak lampion-lampion cantik, bikin suasana berasa di Jepang beneran. Makanannya enak dan halal, porsi juga lumayan besar. 😍🏮
+                  </div>
+                </div>
+                <div class="comment-row">
+                  <div class="avatar-placeholder">
+                    <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 12c2.7 0 4.8-2.1 4.8-4.8S14.7 2.4 12 2.4 7.2 4.5 7.2 7.2 9.3 12 12 12zm0 2.4c-3.2 0-9.6 1.6-9.6 4.8v2.4h19.2v-2.4c0-3.2-6.4-4.8-9.6-4.8z"/></svg>
+                  </div>
+                  <div class="comment-bubble">
+                    <div class="comment-author">Fajar Ramadhan</div>
+                    Selain ramen, bento dan side dish-nya juga mantap. Chicken karaage crispy di luar dan juicy di dalam. Fix bakal balik lagi sama teman-teman. 🍗👍
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Tab 2: Menu -->
+            <div class="tab-content" id="content-tsuka-menu">
+              <div class="menu-tab-content">
+                <img src="assets/tsuka-menu.jpg" alt="Daftar Menu Tsuka Ramen & Bento" />
+              </div>
+            </div>
+
+            <!-- Tab 3: Picture -->
+            <div class="tab-content" id="content-tsuka-picture">
+              <div class="picture-tab-content">
+                <img src="assets/tsuka-exterior.png" alt="Tampak luar Tsuka Ramen & Bento" />
+                <img src="assets/tsuka-interior1.jpg" alt="Suasana interior dengan lampion" />
+                <img src="assets/tsuka-interior2.png" alt="Area tempat duduk pelanggan" />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
